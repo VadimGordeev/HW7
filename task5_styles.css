@@ -1,0 +1,22 @@
+h1 {
+    counter-reset: section;
+}
+h2 {
+    counter-reset: section;
+}
+p::before {
+    counter-increment: section;
+    content: "Пункт " counter(section) ": ";
+}
+ol {
+    counter-reset: section;
+    list-style-type: none;
+}
+ul {
+    counter-reset: section;
+    list-style-type: none;
+}
+li::before {
+    counter-increment: section;
+    content: counters(section,".") " ";
+}
